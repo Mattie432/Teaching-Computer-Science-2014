@@ -5,3 +5,4 @@ The teacher wants to use the results from students taking these quizzes to log t
 3. by the average score, highest to lowest
 
 ## Solution
+The save result function was changed to only store the last 3 results of the pupil. It also appends the results to any existing ones and so keeps all of the results for a pupil on one line in the file.
