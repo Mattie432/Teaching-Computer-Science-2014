@@ -80,7 +80,7 @@ def addResult(_name,_class,_percent):
     #Create a line to write to the file with the new result to
     #the left and 2 empty spaces e.g. "matt@100@@"
     #This will only be used if there is no existing line for this pupil
-    line = _name + "@" + str(_percent) + "@" + "@" + "\n"
+    line = _name + "@" + str(_percent) + "@" + "@" + "@" + "\n"
 
     #Open file for reading & appending (using the 'a+' paramater)
     #This means a blank file is created if it dosent exist
@@ -103,7 +103,7 @@ def addResult(_name,_class,_percent):
             #If the name exists already then add the new result
             #and keep the previous two (moved to the end)
             #e.g. "name @ newResult @ oldResult1 @ oldResult2"
-            line = _name + "@" + str(_percent) + "@" + parsedLine[1] + "@" + parsedLine[2] + "\n"
+            line = _name + "@" + str(_percent) + "@" + parsedLine[1] + "@" + parsedLine[2] + "@" + "\n"
 
             #add the new line to the array of lines to write
             linesOut.append(line)
@@ -136,7 +136,7 @@ def addResult(_name,_class,_percent):
 
 
 #This expects a line with items separated by '@'
-#e.g. "Matt@100@75@45" and returns each element in
+#e.g. "Matt@100@75@45@" and returns each element in
 #an array
 def parseLine(line):
     #This splits the line into an array of elements.
